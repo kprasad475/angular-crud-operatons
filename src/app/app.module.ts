@@ -7,6 +7,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ItemListComponent } from './item-list/item-list.component';
 import { ItemCreateComponent } from './item-create/item-create.component';
 import { ItemEditComponent } from './item-edit/item-edit.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { ItemEditComponent } from './item-edit/item-edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule,
+    MatButton,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration(),

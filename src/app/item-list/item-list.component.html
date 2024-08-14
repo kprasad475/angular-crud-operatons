@@ -1,1 +1,10 @@
-<p>item-list works!</p>
+<!-- src/app/item-list/item-list.component.html -->
+<div class="item-list">
+    <mat-card *ngFor="let item of items" @itemAnim>
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <button mat-button color="primary" (click)="editItem(item)">Edit</button>
+      <button mat-button color="warn" (click)="deleteItem(item.id)">Delete</button>
+    </mat-card>
+  </div>
+  
